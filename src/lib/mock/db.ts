@@ -324,7 +324,7 @@ function seedProducts(): MockProduct[] {
     { name: 'Hydra Calm Milky Cleanser', slug: 'hydra-calm-milky-cleanser', category_id: 1, price: 139000, weight: 120, stock: 8, image: U('photo-1556228578-8c89e6adf883'), units_sold: 176, description: 'Tekstur susu yang melembapkan, diformulasikan untuk kulit kering dan sensitif dengan oat milk dan ceramide.' },
     { name: 'Botanic Rose Toning Mist', slug: 'botanic-rose-toning-mist', category_id: 2, price: 119000, weight: 100, stock: 25, image: U('photo-1598440947619-2c35fc9aa908'), units_sold: 209, description: 'Hydrating mist dengan rose water dan niacinamide untuk menyegarkan dan menenangkan kulit sepanjang hari.' },
     { name: 'AHA-BHA Clarifying Toner', slug: 'aha-bha-clarifying-toner', category_id: 2, price: 149000, weight: 100, stock: 3, image: U('photo-1616394584738-fc6e612e71b9'), units_sold: 198, description: 'Eksfoliasi lembut dengan 4% AHA dan 1% BHA untuk mencegah komedo dan mencerahkan warna kulit.' },
-    { name: 'Lumi Glow Vitamin C Serum', slug: 'lumi-glow-vitamin-c-serum', category_id: 3, price: 259000, weight: 30, stock: 18, image: U('photo-1570194065650-d99fb4bedf0a'), units_sold: 342, description: 'Sodium ascorbyl phosphate 10% dikombinasikan dengan ferulic acid untuk mencerahkan dan melindungi kulit dari radikal bebas.' },
+    { name: 'NOBYDERM Glow Vitamin C Serum', slug: 'nobyderm-glow-vitamin-c-serum', category_id: 3, price: 259000, weight: 30, stock: 18, image: U('photo-1570194065650-d99fb4bedf0a'), units_sold: 342, description: 'Sodium ascorbyl phosphate 10% dikombinasikan dengan ferulic acid untuk mencerahkan dan melindungi kulit dari radikal bebas.' },
     { name: 'Barrier Repair Niacinamide Serum', slug: 'barrier-repair-niacinamide-serum', category_id: 3, price: 189000, weight: 30, stock: 47, image: U('photo-1612817288484-6f916006741a'), units_sold: 401, description: 'Niacinamide 5% + zinc PCA untuk meredakan jerawat, mengontrol minyak, dan memperkuat skin barrier.' },
     { name: 'Retinol 0.5% Night Renewal Serum', slug: 'retinol-05-night-renewal-serum', category_id: 3, price: 289000, weight: 30, stock: 0, image: U('photo-1631729371254-42c2892f0e6e'), units_sold: 156, description: 'Retinol terenkapsulasi dengan squalane untuk regenerasi kulit malam hari tanpa iritasi berlebih.' },
     { name: 'Cloud Hydra Gel Moisturizer', slug: 'cloud-hydra-gel-moisturizer', category_id: 4, price: 179000, weight: 50, stock: 31, image: U('photo-1556228453-efd6c1ff04f6'), units_sold: 265, description: 'Gel moisturizer ringan dengan hyaluronic acid tiga molekul untuk hidrasi berlapis tanpa rasa lengket.' },
@@ -365,9 +365,9 @@ function seedUsers(): MockUser[] {
     created_at: iso(daysAgo(days)),
   });
   return [
-    mk(1, 'Admin Lumière', 'admin@lumiere.com', 'admin', '081100000001', 400),
-    mk(2, 'dr. Yoshi Wijaya', 'doctor.yoshi@lumiere.com', 'doctor', '081211462862', 380),
-    mk(3, 'Salsabila Putri', 'customer@lumiere.com', 'customer', '081234567890', 60),
+    mk(1, 'Admin NOBYDERM', 'admin@nobyderm.com', 'admin', '081100000001', 400),
+    mk(2, 'dr. Yoshi Wijaya', 'doctor.yoshi@nobyderm.com', 'doctor', '081211462862', 380),
+    mk(3, 'Salsabila Putri', 'customer@nobyderm.com', 'customer', '081234567890', 60),
     mk(4, 'Dewi Ananta', 'dewi.ananta@gmail.com', 'customer', '081399988776', 45),
     mk(5, 'Raka Pramudya', 'raka.pramudya@gmail.com', 'customer', '081277665544', 30),
     mk(6, 'Michelle Tanaya', 'michelle.tanaya@gmail.com', 'customer', '081811223344', 25),
@@ -567,7 +567,7 @@ function seedPatients(): MockPatient[] {
     updated_at: iso(daysAgo(days)),
   });
   return [
-    mk(1, 3, 'Salsabila Putri', '081234567890', 'customer@lumiere.com', 'female', 'Kombinasi', 'Tidak ada', 'Jerawat hormonal ringan sejak kuliah (2020), telah selesai terapi 2024.', 60),
+    mk(1, 3, 'Salsabila Putri', '081234567890', 'customer@nobyderm.com', 'female', 'Kombinasi', 'Tidak ada', 'Jerawat hormonal ringan sejak kuliah (2020), telah selesai terapi 2024.', 60),
     mk(2, null, 'Dewi Ananta', '081399988776', 'dewi.ananta@gmail.com', 'female', 'Kering-Sensitif', 'Fragrance', 'Eksim ringan, keluhan kemerahan pada pipi.', 45),
     mk(3, null, 'Raka Pramudya', '081277665544', 'raka.pramudya@gmail.com', 'male', 'Berminyak', 'Tidak ada', 'Jerawat aktif kategori sedang, mulai terapi sejak 2025.', 30),
     mk(4, null, 'Michelle Tanaya', '081811223344', 'michelle.tanaya@gmail.com', 'female', 'Normal', 'Salicylic acid', 'Melasma pasca hamil di area dahi dan pipi.', 25),
@@ -593,7 +593,7 @@ function seedAppointments(): { appointments: MockAppointment[]; histories: MockS
     const startIso = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}T${String(hour).padStart(2, '0')}:00:00`;
     appts.push({
       id: apptId,
-      booking_code: `LB-2026-${String(1000 + apptId)}`,
+      booking_code: `ND-2026-${String(1000 + apptId)}`,
       patient_id: patientId,
       doctor_id: doctorId,
       service_id: serviceId,
@@ -602,7 +602,7 @@ function seedAppointments(): { appointments: MockAppointment[]; histories: MockS
       start_time: startIso,
       end_time: startIso.slice(0, 11) + `${String(Math.floor((hour * 60 + service.duration_minutes) / 60)).padStart(2, '0')}:${String((hour * 60 + service.duration_minutes) % 60).padStart(2, '0')}:00`,
       consultation_mode: mode,
-      meeting_link: mode === 'online' ? 'https://meet.lumiere-beaute.com/room/demo-clinic' : null,
+      meeting_link: mode === 'online' ? 'https://meet.nobyderm.com/room/demo-clinic' : null,
       complaint: 'Konsultasi kondisi kulit wajah.',
       patient_notes: null,
       doctor_notes: extra.diagnosis ? 'Pasien kooperatif, sudah menjalani home care dengan baik.' : null,

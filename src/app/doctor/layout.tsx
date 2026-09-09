@@ -148,14 +148,12 @@ export default function DoctorLayout({ children }: DoctorLayoutProps) {
         <div className="p-6 border-b border-zinc-800/80 flex items-center justify-between">
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-lg font-serif tracking-widest text-white font-normal">
-                LUMIÈRE
-              </span>
+              <img src="/nobyderm-logo.png" alt="NOBYDERM" className="h-6 w-auto object-contain brightness-110" />
               <span className="px-1.5 py-0.5 rounded-md bg-emerald-500/20 text-emerald-400 text-[10px] font-bold tracking-wider uppercase border border-emerald-500/30">
                 CLINICIAN
               </span>
             </div>
-            <p className="text-[10px] text-zinc-500 uppercase tracking-wider mt-0.5">
+            <p className="text-[10px] text-zinc-500 uppercase tracking-wider mt-1">
               Doctor & Specialist Portal
             </p>
           </div>
@@ -258,7 +256,7 @@ export default function DoctorLayout({ children }: DoctorLayoutProps) {
           </button>
 
           <span className="text-sm font-serif tracking-wider font-semibold text-white">
-            LUMIÈRE DOCTOR PORTAL
+            NOBYDERM DOCTOR PORTAL
           </span>
 
           <div className="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">

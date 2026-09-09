@@ -1065,7 +1065,7 @@ function createBooking(body: Record<string, unknown>, user: MockUser | null): Re
     start_time: `${date}T${String(h).padStart(2, '0')}:${String(mm ?? 0).padStart(2, '0')}:00`,
     end_time: `${date}T${String(Math.floor(endMinutes / 60)).padStart(2, '0')}:${String(endMinutes % 60).padStart(2, '0')}:00`,
     consultation_mode: mode,
-    meeting_link: mode === 'online' ? 'https://meet.lumiere-beaute.com/room/demo-clinic' : null,
+    meeting_link: mode === 'online' ? 'https://meet.nobyderm.com/room/demo-clinic' : null,
     complaint: asString(body.notes) || null,
     patient_notes: asString(body.notes) || null,
     doctor_notes: null,
@@ -1169,7 +1169,7 @@ export async function handleMockApi(req: Request, segments: string[]): Promise<R
 
   /* ---------- Public: health ---------- */
   if (path === 'health' && method === 'GET') {
-    return json({ status: 'ok', service: 'lumiere-mock-api', timestamp: nowIso() });
+    return json({ status: 'ok', service: 'nobyderm-mock-api', timestamp: nowIso() });
   }
 
   /* ---------- Auth ---------- */
@@ -2111,7 +2111,7 @@ export async function handleMockApi(req: Request, segments: string[]): Promise<R
       rating: asNumber(body.rating, 4.5),
       review_count: asNumber(body.review_count, 0),
       avatar_color: asString(body.avatar_color, 'from-rose-400 to-pink-500'),
-      bio: asString(body.bio, 'Dokter spesialis kulit Lumière Beauté.'),
+      bio: asString(body.bio, 'Dokter spesialis kulit NOBYDERM.'),
       skills: Array.isArray(body.skills) ? body.skills.map((s) => asString(s)) : [],
       schedule_days: asString(body.schedule_days, 'Senin - Jumat'),
       available_days: Array.isArray(body.available_days) ? body.available_days.map((d) => asNumber(d, 1)) : [1, 2, 3, 4, 5],

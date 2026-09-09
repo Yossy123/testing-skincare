@@ -1,6 +1,6 @@
-# LUMIÈRE BEAUTÉ — Frontend Demo
+# NOBYDERM — Frontend Demo
 
-Versi demo standalone dari frontend Lumière Beauté yang **tidak memerlukan backend Laravel, database, Redis, maupun Midtrans**. Semua data berasal dari mock API bawaan (in-memory), sehingga project ini bisa langsung dijalankan maupun di-deploy (misalnya ke Vercel) untuk keperluan presentasi ke client.
+Versi demo standalone dari frontend NOBYDERM yang **tidak memerlukan backend Laravel, database, Redis, maupun Midtrans**. Semua data berasal dari mock API bawaan (in-memory), sehingga project ini bisa langsung dijalankan maupun di-deploy (misalnya ke Vercel) untuk keperluan presentasi ke client.
 
 > Catatan: ini adalah clone presentasi — bukan untuk production. Data mock hilang dan kembali ke nilai awal setiap server cold-start.
 
@@ -16,9 +16,9 @@ Versi demo standalone dari frontend Lumière Beauté yang **tidak memerlukan bac
 
 | Role     | Email                       | Password   |
 | -------- | --------------------------- | ---------- |
-| Customer | `customer@lumiere.com`      | `password` |
-| Dokter   | `doctor.yoshi@lumiere.com`  | `password` |
-| Admin    | `admin@lumiere.com`         | `password` |
+| Customer | `customer@nobyderm.com`     | `password` |
+| Dokter   | `doctor.yoshi@nobyderm.com` | `password` |
+| Admin    | `admin@nobyderm.com`        | `password` |
 
 Semua akun juga tersedia sebagai tombol quick-fill di halaman `/login`. Email lain akan otomatis dibuat sebagai akun customer (mode demo).
 
@@ -44,7 +44,7 @@ Tidak ada environment variable yang perlu diisi manual — konfigurasi demo suda
 
 **Cara 1 — via Git (disarankan):**
 
-1. Push folder ini ke repo GitHub (misal `lumiere-frontend-demo`).
+1. Push folder ini ke repo GitHub (misal `nobyderm-frontend-demo`).
 2. Di [vercel.com](https://vercel.com) → **Add New Project** → pilih repo tersebut.
 3. Framework preset akan terdeteksi otomatis (Next.js). Langsung klik **Deploy**.
 

@@ -92,14 +92,14 @@ function LoginFormContent() {
 
         {/* Card Header */}
         <div className="text-center mb-8">
-          <div className="w-12 h-12 mx-auto rounded-2xl bg-rose-50 dark:bg-rose-950/50 text-rose-500 flex items-center justify-center mb-3 shadow-xs border border-rose-100/60 dark:border-zinc-700">
-            <Sparkles className="w-6 h-6 text-rose-400" />
-          </div>
+          <Link href="/" className="inline-block mb-4">
+            <img src="/nobyderm-logo.png" alt="NOBYDERM" className="h-8 sm:h-9 w-auto mx-auto object-contain" />
+          </Link>
           <h1 className="text-2xl sm:text-3xl font-serif text-zinc-900 dark:text-zinc-50 font-normal">
             Welcome Back
           </h1>
           <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1">
-            Sign in to access your Lumière beauty bag & orders
+            Sign in to access your NOBYDERM account & orders
           </p>
         </div>
 
@@ -130,7 +130,7 @@ function LoginFormContent() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="customer@lumiere.com"
+                placeholder="customer@nobyderm.com"
                 className="w-full pl-10 pr-4 py-3 text-xs sm:text-sm rounded-xl bg-stone-50 dark:bg-zinc-800/80 border border-rose-100 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 focus:outline-hidden focus:ring-2 focus:ring-rose-400"
               />
             </div>
@@ -195,7 +195,7 @@ function LoginFormContent() {
           <div className="grid grid-cols-3 gap-2">
             <button
               type="button"
-              onClick={() => handleFillDemo('customer@lumiere.com', 'password')}
+              onClick={() => handleFillDemo('customer@nobyderm.com', 'password')}
               className="px-2 py-1.5 rounded-lg bg-white dark:bg-zinc-800 border border-rose-100 dark:border-zinc-700 hover:border-rose-300 text-left transition-colors cursor-pointer"
             >
               <div className="font-semibold text-rose-600 dark:text-rose-400 text-xs">Customer</div>
@@ -203,7 +203,7 @@ function LoginFormContent() {
             </button>
             <button
               type="button"
-              onClick={() => handleFillDemo('doctor.yoshi@lumiere.com', 'password')}
+              onClick={() => handleFillDemo('doctor.yoshi@nobyderm.com', 'password')}
               className="px-2 py-1.5 rounded-lg bg-white dark:bg-zinc-800 border border-emerald-100 dark:border-zinc-700 hover:border-emerald-400 text-left transition-colors cursor-pointer"
             >
               <div className="font-semibold text-emerald-600 dark:text-emerald-400 text-xs">Dokter</div>
@@ -211,7 +211,7 @@ function LoginFormContent() {
             </button>
             <button
               type="button"
-              onClick={() => handleFillDemo('admin@lumiere.com', 'password')}
+              onClick={() => handleFillDemo('admin@nobyderm.com', 'password')}
               className="px-2 py-1.5 rounded-lg bg-white dark:bg-zinc-800 border border-rose-100 dark:border-zinc-700 hover:border-rose-300 text-left transition-colors cursor-pointer"
             >
               <div className="font-semibold text-zinc-700 dark:text-zinc-300 text-xs">Admin</div>

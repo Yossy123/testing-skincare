@@ -58,18 +58,12 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Brand Logo */}
             <div className="flex items-center gap-3">
-              <Link href="/" className="flex items-center gap-2.5 group">
-                <span className="w-9 h-9 rounded-full bg-linear-to-tr from-rose-500 to-pink-400 flex items-center justify-center text-white shadow-sm shadow-rose-500/30 font-serif font-bold text-base transition-transform group-hover:scale-105">
-                  L
-                </span>
-                <div className="flex flex-col">
-                  <span className="font-serif tracking-widest text-lg sm:text-xl font-semibold bg-linear-to-r from-zinc-900 via-rose-950 to-zinc-800 dark:from-zinc-100 dark:via-rose-200 dark:to-zinc-300 bg-clip-text text-transparent">
-                    LUMIÈRE
-                  </span>
-                  <span className="text-[9px] tracking-[0.25em] uppercase text-rose-500 font-semibold -mt-1">
-                    BEAUTÉ
-                  </span>
-                </div>
+              <Link href="/" className="flex items-center gap-2 group">
+                <img
+                  src="/nobyderm-logo.png"
+                  alt="NOBYDERM"
+                  className="h-8 sm:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                />
               </Link>
             </div>
 

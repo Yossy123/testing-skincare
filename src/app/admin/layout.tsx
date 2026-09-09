@@ -184,14 +184,12 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         <div className="p-6 border-b border-zinc-800/80 flex items-center justify-between">
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-lg font-serif tracking-widest text-white font-normal">
-                LUMIÈRE
-              </span>
+              <img src="/nobyderm-logo.png" alt="NOBYDERM" className="h-6 w-auto object-contain brightness-110" />
               <span className="px-1.5 py-0.5 rounded-md bg-rose-500/20 text-rose-400 text-[10px] font-bold tracking-wider uppercase border border-rose-500/30">
                 ADMIN
               </span>
             </div>
-            <p className="text-[10px] text-zinc-500 uppercase tracking-wider mt-0.5">
+            <p className="text-[10px] text-zinc-500 uppercase tracking-wider mt-1">
               E-Commerce Analytics
             </p>
           </div>
@@ -285,7 +283,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           </button>
 
           <span className="text-sm font-serif tracking-wider font-semibold text-white">
-            LUMIÈRE ADMIN
+            NOBYDERM ADMIN
           </span>
 
           <div className="w-7 h-7 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center text-xs font-bold">

@@ -94,14 +94,14 @@ function RegisterFormContent() {
 
         {/* Card Header */}
         <div className="text-center mb-8">
-          <div className="w-12 h-12 mx-auto rounded-2xl bg-rose-50 dark:bg-rose-950/50 text-rose-500 flex items-center justify-center mb-3 shadow-xs border border-rose-100/60 dark:border-zinc-700">
-            <Sparkles className="w-6 h-6 text-rose-400" />
-          </div>
+          <Link href="/" className="inline-block mb-4">
+            <img src="/nobyderm-logo.png" alt="NOBYDERM" className="h-8 sm:h-9 w-auto mx-auto object-contain" />
+          </Link>
           <h1 className="text-2xl sm:text-3xl font-serif text-zinc-900 dark:text-zinc-50 font-normal">
             Create an Account
           </h1>
           <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1">
-            Join the Lumière Beauté community for exclusive beauty perks
+            Join the NOBYDERM community for exclusive skincare perks
           </p>
         </div>
 

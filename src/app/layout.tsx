@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LUMIÈRE BEAUTÉ | Mini E-Commerce Foundation",
-  description: "Modern beauty & cosmetics mini e-commerce architecture powered by Next.js, TypeScript, Tailwind CSS, Zustand, and Laravel REST API.",
+  title: "NOBYDERM | Clinical Skincare & Dermatology Clinic",
+  description: "Official NOBYDERM store and clinic portal. Scientifically formulated skincare and aesthetic treatments.",
 };
 
 export default function RootLayout({

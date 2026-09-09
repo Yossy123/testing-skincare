@@ -58,11 +58,14 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Brand Logo */}
             <div className="flex items-center gap-3">
-              <Link href="/" className="flex items-center gap-2 group">
+              <Link
+                href="/"
+                className="group flex items-center rounded-xl bg-zinc-950 px-3 py-1.5 shadow-sm ring-1 ring-zinc-800/60 transition-transform duration-300 group-hover:scale-105"
+              >
                 <img
                   src="/nobyderm-logo.png"
                   alt="NOBYDERM"
-                  className="h-8 sm:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="h-6 sm:h-7 w-auto object-contain"
                 />
               </Link>
             </div>

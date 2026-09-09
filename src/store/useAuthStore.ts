@@ -108,7 +108,6 @@ export const useAuthStore = create<AuthState>()(
           useCartStore.getState().closeCart();
           if (typeof window !== 'undefined' && window.localStorage) {
             window.localStorage.removeItem('nobyderm-shopping-bag');
-            window.localStorage.removeItem('lumiere-shopping-bag');
           }
         } catch {
           // ignore in non-browser environments

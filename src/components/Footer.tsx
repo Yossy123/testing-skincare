@@ -10,7 +10,9 @@ export function Footer() {
         {/* Brand Info */}
         <div className="space-y-3 md:col-span-1">
           <div className="flex items-center gap-2">
-            <img src="/nobyderm-logo.png" alt="NOBYDERM" className="h-7 w-auto object-contain" />
+            <span className="inline-flex items-center rounded-lg bg-zinc-950 px-2.5 py-1.5">
+              <img src="/nobyderm-logo.png" alt="NOBYDERM" className="h-5 w-auto object-contain" />
+            </span>
           </div>
           <p className="text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">
             Elevating clinical skincare with scientifically formulated treatments, dermatologist care, and holistic skin health.

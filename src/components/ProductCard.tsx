@@ -57,14 +57,7 @@ export function ProductCard({ product }: ProductCardProps) {
         href={`/products/${product.slug}`}
         className={`relative w-full aspect-square bg-linear-to-br ${bgGradient} flex items-center justify-center p-6 overflow-hidden`}
       >
-        {/* Real product photo (falls back to the placeholder beneath on error) */}
-        <ProductImage
-          image={product.image}
-          alt={product.name}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-
-        {/* Decorative cosmetic icon & bottle silhouette */}
+        {/* Decorative cosmetic icon & bottle silhouette (Placeholder when photo is missing/loading) */}
         <div className="flex flex-col items-center justify-center text-center p-4 transition-transform duration-500 group-hover:scale-105">
           <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/80 dark:bg-zinc-800/80 backdrop-blur-md shadow-md flex items-center justify-center text-rose-500 mb-2 border border-rose-100/60 dark:border-zinc-700">
             <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-rose-400" />
@@ -74,26 +67,33 @@ export function ProductCard({ product }: ProductCardProps) {
           </span>
         </div>
 
+        {/* Real product photo (covers the placeholder when loaded) */}
+        <ProductImage
+          image={product.image}
+          alt={product.name}
+          className="absolute inset-0 w-full h-full object-cover z-10"
+        />
+
         {/* Category Pill Tag */}
         {product.category && (
-          <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wider uppercase bg-white/90 dark:bg-zinc-900/90 text-zinc-700 dark:text-zinc-300 shadow-xs backdrop-blur-xs border border-zinc-100 dark:border-zinc-800">
+          <span className="absolute top-3 left-3 z-20 px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wider uppercase bg-white/90 dark:bg-zinc-900/90 text-zinc-700 dark:text-zinc-300 shadow-xs backdrop-blur-xs border border-zinc-100 dark:border-zinc-800">
             {product.category.name}
           </span>
         )}
 
         {/* Stock Status Badge */}
         {isOutOfStock ? (
-          <span className="absolute top-3 right-3 px-2 py-0.5 rounded-full text-[10px] font-bold bg-zinc-800 text-white dark:bg-zinc-700">
+          <span className="absolute top-3 right-3 z-20 px-2 py-0.5 rounded-full text-[10px] font-bold bg-zinc-800 text-white dark:bg-zinc-700">
             Sold Out
           </span>
         ) : isLowStock ? (
-          <span className="absolute top-3 right-3 px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-900/60 dark:text-amber-200">
+          <span className="absolute top-3 right-3 z-20 px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-900/60 dark:text-amber-200">
             Only {product.stock} left
           </span>
         ) : null}
 
         {/* Hover Quick View Overlay */}
-        <div className="absolute inset-0 bg-rose-950/20 dark:bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 backdrop-blur-2xs">
+        <div className="absolute inset-0 z-20 bg-rose-950/20 dark:bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 backdrop-blur-2xs">
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 text-xs font-semibold shadow-md transform translate-y-2 group-hover:translate-y-0 transition-transform">
             <Eye className="w-3.5 h-3.5 text-rose-500" />
             View

@@ -105,12 +105,12 @@ export default function CartPage() {
                           href={`/products/${item.slug}`}
                           className="relative w-20 h-20 rounded-2xl bg-linear-to-br from-rose-50 to-pink-50 dark:from-zinc-800 dark:to-zinc-800/60 border border-rose-100 dark:border-zinc-700 flex items-center justify-center shrink-0 overflow-hidden"
                         >
+                          <Sparkles className="w-8 h-8 text-rose-400" />
                           <ProductImage
                             image={item.image}
                             alt={item.name}
-                            className="absolute inset-0 w-full h-full object-cover"
+                            className="absolute inset-0 w-full h-full object-cover z-10"
                           />
-                          <Sparkles className="w-8 h-8 text-rose-400" />
                         </Link>
 
                         <div className="min-w-0">
